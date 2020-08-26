@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+    }
+
+    .container {
+      display: flex;
+      position: relative;
+      flex: 1;
+      height: 500px;
+      box-sizing: border-box;
+      border: 1px solid #55a532;
+      overflow: hidden;
+    }
+
+
+    #box1 {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: 100px;
+      top: 100px;
+      background-color: #30a5dd;
+    }
+
+    #box2 {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 2000px;
+      background-color: #9a6e3a;
+    }
+
+  </style>
+  <script src="./drag-resize.js"></script>
+  <script>
+  window.onload = function () {
+    dragResize('#box1','#container1')
+  }
+  </script>
+</head>
+<body>
+<div id="wrap">
+  <div id="container1" class="container">
+    <div id="box1">
+    </div>
+  </div>
+  <!--  <div id="container2" class="container">
+    </div>
+    <div id="container3" class="container">
+    </div>-->
+</div>
+
+</body>
+</html>
